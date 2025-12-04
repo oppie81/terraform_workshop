@@ -1,4 +1,4 @@
-resource "aap_inventory" "TechXchangeNL (mark)" {
+resource "aap_inventory" "TechXchangeNL" {
   name = "TechXchangeNL (mark)"
   organization_name = "TechXchangeNL"
 }
@@ -17,7 +17,7 @@ resource "aap_host" "my_host" {
   })
 }
 
-resource "aap_group" "my_groub" {
+resource "aap_group" "my_group" {
   inventory_id = aap_inventory.my_inventory.id
   name         = "role_webserver"
 }
