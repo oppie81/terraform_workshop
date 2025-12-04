@@ -6,6 +6,8 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 6.0"
     }
+    aap = {
+      source = "ansible/aap"
   }
 }
 
@@ -15,14 +17,6 @@ provider "aws" {
     default_tags {
     tags = {
       ManagedBy = "HCP Terraform"
-    }
-  }
-}
-
-terraform {
-  required_providers {
-    aap = {
-      source = "ansible/aap"
     }
   }
 }
