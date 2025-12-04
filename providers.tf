@@ -23,7 +23,7 @@ provider "aws" {
 }
 
 provider "aap" {
-  host = "https://https://caap.fvz.ansible-labs.de/"
+  host = "https://caap.fvz.ansible-labs.de/"
 
   # Token authentication is recommended
   token = "zFaqyV8ta7uxMOWgcdSZ6FyWIrDUl9" # Also supports AAP_TOKEN environment variable
