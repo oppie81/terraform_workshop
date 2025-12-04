@@ -1,11 +1,11 @@
 resource "aap_inventory" "TechXchangeNL" {
   name = "TechXchangeNL (mark)"
-  organization_name = "TechXchangeNL"
+  organization_name = 2
 }
 
 resource "aap_host" "my_host" {
   for_each     = { for idx, instance in aws_instance.web_server : idx => instance }
-  inventory_id = aap_inventory.inventory.id
+  inventory_id = aap_inventory.TechXchangeNL.id
   groups = toset([resource.aap_group.my_group.id])
   name         = each.value.tags.Name
   description  = "Host provisioned by HCP Terraform"
