@@ -8,6 +8,7 @@ terraform {
     }
     aap = {
       source = "ansible/aap"
+    }
   }
 }
 
