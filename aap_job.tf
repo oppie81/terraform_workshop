@@ -10,8 +10,8 @@ data "aap_job_template" "deploy_website" {
 }
 
 resource "aap_job" "deploy_webserver" {
-  job_template_id = data.aap_job_template.job_template.id
-  inventory_id = data.aap_inventory.inventory.id
+  job_template_id = data.aap_job_template.deploy_webserver.id
+  inventory_id = data.aap_inventory.TechXchangeNL.id
   organization_name = "TechXchangeNL"
   depends_on = [
     aap_host.my_host,
@@ -20,8 +20,8 @@ resource "aap_job" "deploy_webserver" {
 }
 
 resource "aap_job" "deploy_website" {
-  job_template_id = data.aap_job_template.job_template.id
-  inventory_id = data.aap_inventory.inventory.id
+  job_template_id = data.aap_job_template.deploy_website.id
+  inventory_id = data.aap_inventory.TechXchangeNL.id
   organization_name = "TechXchangeNL"
   depends_on = [
     aap_host.my_host,
