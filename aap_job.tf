@@ -12,7 +12,6 @@ data "aap_job_template" "deploy_website" {
 resource "aap_job" "deploy_webserver" {
   job_template_id = data.aap_job_template.deploy_webserver.id
   inventory_id = aap_inventory.TechXchangeNL.id
-  organization_name = "TechXchangeNL"
   depends_on = [
     aap_host.my_host,
     aap_group.my_group
@@ -22,7 +21,6 @@ resource "aap_job" "deploy_webserver" {
 resource "aap_job" "deploy_website" {
   job_template_id = data.aap_job_template.deploy_website.id
   inventory_id = aap_inventory.TechXchangeNL.id
-  organization_name = "TechXchangeNL"
   depends_on = [
     aap_host.my_host,
     aap_group.my_group
